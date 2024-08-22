@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/layout.css">
+   <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    {% if current_user.adm == "SIM" %}
+    <div class="container-cadastro">
+        <form action="/adm/{{users.id_usuario}}" method="post">
+          <div>
+            <img src="{{url_for('static',filename='img/Logo.png')}}"/>
+          </div>
+            <div>
+              <h1>Torna adm</h1>
+            </div>
+            <div>
+                <input type="text"  name="adm" placeholder="SIM/NÃO">
+            </div>
+            <div>
+                <button class="button" type="submit">Atualizar</button>
+            </div>
+        </form>
+    </div>
+    {% endif %}
+
+</body>
+</html>

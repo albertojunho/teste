@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/css/home.css">
+  <link rel="stylesheet" href="../static/css/layout.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <title>Home</title>
+</head>
+<body class="relative">
+  
+  {% extends 'base.html' %}
+
+  {% block conteudo %}
+  <div class="background">
+    <div class="align center flex">
+      <div>
+        <h1>Monitoramento de lagoas em <br> tempo real</h1>
+        <p>Aqui nós monitoramos as lagoas perto de você 100% <br> em tempo real</p>
+        <button class="saiba-mais">Saiba mais</button>
+      </div>
+      <img src="{{url_for('static',filename='img/Globe.png')}}">
+    </div>
+  </div>
+  
+  <div class="linha center"></div>
+
+
+  <div class="conteudo">
+    <div class="align2 center flex">
+      <img src="{{url_for('static',filename='img/Imagem.png')}}">
+      <div>
+        <h2>O que abordamos</h2>
+        <p class="topico">Morbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus id <br> scelerisque est ultricies ultricies. Duis est sit sed leo nisl, blandit elit <br> sagittis. Quisque tristique consequat quam sed. Nisl at scelerisque amet <br> nulla purus habitasse.</p>
+        <p>Nunc sed faucibus bibendum feugiat sed interdum. Ipsum egestas <br> condimentum mi massa. In tincidunt pharetra consectetur sed duis <br> facilisis metus. Etiam egestas in nec sed et. Quis lobortis at sit dictum <br> eget nibh tortor commodo cursus.</p>
+      </div>
+    </div>
+
+    
+  </div>
+  
+  <div class="conteudo">
+    <div class="align2 center flex">
+      <div>
+        <h2>Estamos com você!</h2>
+        <p class="topico">Morbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus id <br> scelerisque est ultricies ultricies. Duis est sit sed leo nisl, blandit elit <br> sagittis. Quisque tristique consequat quam sed. Nisl at scelerisque amet <br> nulla purus habitasse.</p>
+        <p>Nunc sed faucibus bibendum feugiat sed interdum. Ipsum egestas <br> condimentum mi massa. In tincidunt pharetra consectetur sed duis <br> facilisis metus. Etiam egestas in nec sed et. Quis lobortis at sit dictum <br> eget nibh tortor commodo cursus.</p>
+      </div>
+      <img src="{{url_for('static',filename='img/Imagem1.png')}}">
+    </div>
+  </div>
+
+  <div class="linha center"></div>
+
+  <div class="center colaboradores">
+    <h2>COLABORADOES</h2>
+    <p>Morbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus id scelerisque <br> est ultricies ultricies. Duis est sit sed leo nisl, blandit elit sagittis. </p>
+    <img src="../static/img/Criadores.png" alt="">
+  </div>
+  {% endblock %}
+
+
+  
+</body>
+</html>

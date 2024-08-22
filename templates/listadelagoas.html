@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/listadelagoas.css">
+    <link rel="stylesheet" href="../static/css/layout.css">
+   
+    <title>lagoas</title>
+</head>
+<body>
+
+    {% extends 'base.html' %}
+
+    {% block conteudo %}
+    
+        <table>
+            <tr>
+                <th colspan="6">
+                    <h2>Lagoas Cadastradas</h2>
+                    <p>Veja todas as lagoas que temos cadastradas em nosso sistema.</p>
+                </th>
+
+            </tr>
+            <tr>
+                <th>Nome da lagoa</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th colspan="3">Nivel</th>
+            </tr>
+            
+            {% for i in listalagoas %}
+            <tr>
+                <td>
+                    {{i.nome}}
+                </td>
+                <td>
+                    {{i.latitude}}
+                </td>
+                <td>
+                    {{i.longitude}}
+                </td>
+                <td>
+                    {{i.nivel}}
+                </td>
+                <td>
+                    <a href="/verlagoa/{{i.id_lagoa}}">Ver</a>
+                </td>
+                {% if current_user.adm == "SIM" %}
+                <td>
+                    <a href="/Excluirlagoa/{{i.id_lagoa}}">Excluir lagoa</a>
+                </td>
+                <td>
+                    <a href="/atualizarnivel/{{i.id_lagoa}}">Atualizar nivel</a>
+                </td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </table>
+     
+        {% endblock %}
+   
+</body>
+</html>

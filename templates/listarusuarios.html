@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/listadelagoas.css">
+    <link rel="stylesheet" href="../static/css/layout.css">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+
+    {% block conteudo %}
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>Torna ele(a) ADM</th>
+                <th>Status</th>
+            </tr>
+            {% for i in users %}
+            <tr>
+                <td><h3>{{i.nome}}</h3></td>
+                <td><a href="/adm/{{i.id_usuario}}">Torna Adm</a></td> 
+                <td><h3>Ele(a) é {{i.adm}}</h3></td> 
+            </tr>
+            {% endfor %}
+        </table>
+        
+    {% endblock %}
+</body>
+</html>

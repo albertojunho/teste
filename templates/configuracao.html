@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/configuracao.css">
+    <link rel="stylesheet" href="../static/css/layout.css">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+
+    {% block conteudo %}
+        <div class="just">
+            <div class="user">
+                <h2>CONFGURAÇÕES</h2>
+                <h3>Olá {{current_user.nome}}</h3>
+            </div>
+            <div margi style="gap: 16px;" class="flex">
+
+                <div onmouseleave="normalborder()" onmouseover="corborder()" id="cor"  onclick="informacao()" class="box">
+                    <img src="../static/img/informacao.png" alt="">
+                    <h4 >Informações pessoais</h4>
+                    <p>Forneça dados pessoais e como <br> podemos entrar em contato com você</p>
+                </div>
+
+                <div onmouseleave="normalborder2()" onmouseover="corborder2()" id="cor2" onclick="seguranca()" class="box">
+                    <img src="../static/img/seguraca.png" alt="">
+                    <h4>Login e Seguranaça</h4>
+                    <p>Atualize sua senha e proteja sua conta</p>
+                </div>
+
+                <div onmouseleave="normalborder3()" onmouseover="corborder3()" id="cor3" onclick="notificacoes()" class="box">
+                    <img src="../static/img/notificacao.png" alt="">
+                    <h4>Notificações</h4>
+                    <p>Escolha as preferências de notificação <br> e como  deseja ser contatado</p>
+                </div>
+
+
+            </div>
+        </div>
+    {% endblock %}
+    <script src={{url_for('static',filename='JS/script.js')}}></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/layout.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="nav">
+        <div class="max-width center">
+          <ul class="ul">
+            <div>
+              <li > <a href="/map" class="button-aba">Mapa</a></li>
+              {% if current_user.adm == "SIM" %}
+              <li> <a href="/usuarios" class="button-aba">listar usuarios</a></li>
+              {% endif %}
+              <li><a href="/listadelagoas" class="button-aba">Lagoas</a></li>
+              <li>
+                <button onclick="opti()" class="button-aba">Opções</button>
+                <div style="display:none;" id="option" class="opcoes">
+             
+                  <a href="/configuracao">Configurações</a>
+                  
+                </div>
+              </li>
+            </div>
+          </ul>
+          <a href="/home">
+            <img src="{{url_for('static',filename='img/logo2.png')}}"/>
+          </a>
+      
+          <a href="{{url_for('logout')}}" class="log_button">Log out</a>
+        </div>
+      </nav>
+
+
+
+     
+
+
+
+    {% block conteudo %}
+    {% endblock %}
+    
+    <div class="footer">
+      <div class="flex center">
+        <a href="#">© 2023 S.O.S.A. All rights reserved.</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <img src="../static/img/Instagram.png" alt="">
+        <img src="../static/img/Facebook.png" alt="">
+        <img src="../static/img/Github.png" alt="">
+      </div>
+    </div>
+    <script src={{url_for('static',filename='JS/script.js')}}></script>
+</body>
+</html>

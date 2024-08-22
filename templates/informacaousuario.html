@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/informacaousuario.css">
+    <link rel="stylesheet" href="../static/css/layout.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+
+
+    {% block conteudo %}
+
+   <div class="center">
+    <div class="PersonalInfoSettings flex">
+        <div class="border-bottom">
+            <label for="">Nome</label>
+            <h3>{{current_user.nome}}
+        </div>
+        <div class="border-bottom">
+            <label for="">E-mail</label>
+            <h3>{{current_user.email}}
+        </div>
+        <div class="border-bottom">
+            <label for="">Celular</label>
+            <h3>{{current_user.celular}}
+        </div>
+
+        <div class="button">
+            <a class="button-alteracao" href="/update/{{current_user.id_usuario}}">Atualiza usuario</a>
+            <a class="button-delete" href="/excluirconta/{{current_user.id_usuario}}">Excluir conta</a>
+        </div>
+    </div>
+   </div>
+           
+    {% endblock %}
+   
+
+
+    <script src={{url_for('static',filename='JS/script.js')}}></script>
+</body>
+</html>

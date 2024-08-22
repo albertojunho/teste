@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/css/layout.css">
+   <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+  <title>cadastro</title>
+</head>
+<body>
+  <div class="container-cadastro">
+    <form action="/update/{{user.id_usuario}}" method="post">
+      <div>
+        <img src="{{url_for('static',filename='img/Logo.png')}}"/>
+      </div>
+        <div>
+          <h1>Atualize seu usuario</h1>
+        </div>
+        <div>
+          <input type="text" placeholder="Nome" name="nome" value="{{user.nome}}">
+        </div>
+        <div>
+          <input type="tel" placeholder="Celular" name="celular" value="{{user.celular}}">
+        </div>
+        <div>
+          <input type="email" placeholder="Email" name="email" value="{{user.email}}">
+        </div>
+        <div>
+          <input type="text" placeholder="Endereço" name="endereco" value="{{user.endereco}}">
+        </div>
+        <div>
+          <button class="button" type="submit">Atualizar</button>
+        </div>
+        
+        <div class="h5">
+          <h5>© 2023 SOSA</h5>
+        </div>
+    </form>
+  </div>
+   
+</body>
+</html>

@@ -1,0 +1,71 @@
+html, body{
+    height: 100%;
+    overflow-y: hidden;
+  }
+  
+body{
+    width: 100%;
+    margin-left:auto;
+    margin-right:auto;
+    background-image:url("../img/fundo.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    text-align:center;
+}
+
+  
+  input{
+    background:transparent;
+    margin:25px;
+    border-radius:30px;
+    height:100%;
+    width:83%;
+    padding:10px;
+    outline-color: transparent;
+    border: black solid 2px;
+    
+    
+  }
+  
+form {
+    
+    width:400px;
+    height:100%;
+    padding:20px;
+    
+}
+    
+   
+  h1{
+    text-align:center;
+  }
+.google{
+    width:350px;
+    height:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:transparent;
+    margin-bottom:20px;
+   
+  }
+.button{
+    width:350px;
+    height:50px;
+    background-color:black;
+    color:white;
+    border:none;
+  }
+.button-center{
+   margin-left:25px;
+    margin-top:10px;
+  }
+.h5{
+    margin-top:30px;
+  }
+a{
+    text-decoration:none;
+}

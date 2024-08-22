@@ -1,0 +1,32 @@
+.folium-map{
+    position: relative;
+    width: 50.0%;
+    height: 50.0%;
+    margin-left: 25%;
+    margin-top: 20px;
+    
+}
+
+.leaflet-container { font-size: 1rem; }
+
+
+form{
+    text-align: center;
+    margin-top: 20px;
+}
+
+input{
+    background:transparent;
+    border-radius:30px;
+    width:10%;
+    padding:10px;
+    outline-color: transparent;
+    border: black solid 2px;
+}
+button{
+    border:none;
+    background:#48BFE3;
+    padding:8px 20px;
+    border-radius:10px;
+    color: black;
+}

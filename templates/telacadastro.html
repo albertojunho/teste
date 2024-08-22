@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+  <link rel="stylesheet" href="../static/css/layout.css">
+  <title>cadastro</title>
+</head>
+<body>
+  <div class="container-cadastro">
+    <form action="{{url_for('add')}}" method="post">
+      <div>
+        <img src="{{url_for('static',filename='img/Logo.png')}}"/>
+      </div>
+        <div>
+          <h1>Cadastre-se</h1>
+        </div>
+        <div>
+          <input type="text" placeholder="Nome" name="nome" required>
+        </div>
+        <div>
+          <input type="email" placeholder="Email" name="email" required>
+        </div>
+        <div>
+          <input type="tel" placeholder="Celular" name="celular" required>
+        </div>
+        <div>
+          <input type="password" placeholder="Senha" name="senha" required>
+        </div>
+        <div>
+          <input type="text" placeholder="Endereço" name="endereco">
+        </div>
+        <div>
+          <button class="button" type="submit">Cadastrar</button>
+        </div>
+        <div class="button-center">
+          <button class="google"> <img src="{{url_for('static',filename='img/google-logo-24.png')}}"/>
+          <span>Sign Up with Google</span></button>
+          
+        </div>
+        <div >
+        <span>Voce ja tem uma conta?<a href="/telalogin">clique aqui</a></span>
+        </div>
+        <div class="h5">
+          <h5>© 2023 SOSA</h5>
+        </div>
+    </form>
+  </div>
+    <script src="../static/JS/script.js"></script>
+</body>
+</html>

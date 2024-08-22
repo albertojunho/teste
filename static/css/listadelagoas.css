@@ -1,0 +1,25 @@
+table {
+  border-collapse: collapse;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+
+}
+
+th, td {
+  width: 10%;
+}
+table ,tr ,th{
+    text-align: start;
+}
+table th, td{
+  border: 2px solid #7D8697;
+  padding: 5px;
+}
+
+.column{
+  flex-direction: column;
+  gap: 15px;
+}

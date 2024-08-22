@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/css/layout.css">
+   <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+  <title>Login</title>
+</head>
+<body>
+   <div>
+        <form action="/autenticar" method="post" >
+            <div>
+            <img src="{{url_for('static',filename='img/Logo.png')}}"/>
+            </div>
+            <div>
+                <h1>Entre</h1>
+            </div>
+            <div>
+                <input id="email" type="email" placeholder="E-mail" name="email">
+            </div>
+            <div>
+                <input type="password" placeholder="Senha" name="senha">
+            </div>
+            <div>
+                <button class="button" type="submit">Entrar</button>
+            </div>
+            <div class="button-center">
+                <button class="google"> <img src="{{url_for('static',filename='img/google-logo-24.png')}}"/>
+                <span>Sign Up with Google</span></button>
+                
+            </div>
+            <div >
+                <span>Não tem uma conta?<a href="/">clique aqui</a></span>
+            </div>
+            <div class="h5">
+                <h5>© 2023 SOSA</h5>
+            </div>
+        </form>
+        
+  </div>
+</body>
+</html>
